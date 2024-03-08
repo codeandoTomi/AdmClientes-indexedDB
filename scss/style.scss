@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: cadetblue;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+
+    .aside{
+        background-color: aqua;
+        padding: 15px;
+
+        h1,p{
+            margin: 30px 0px;
+        }
+        nav{
+            display: flex;
+            flex-direction: column;
+            a{
+                padding: 8px 0px;
+                font-size: 25px;
+                margin: 10px 0px;
+                text-decoration: none;
+                background-color: aquamarine;
+            }
+        }
+    }
+
+
+
+
+}
+main{
+    table{
+
+        margin: 10px;
+        padding: 10px;
+
+        thead{
+            tr{
+                th{
+                    margin: 10px;
+                    padding: 10px 30px;
+                }
+            }
+        }
+        tbody{
+
+        }
+    }
+        
+    width: 100%;
+    section{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        form{
+            border: 3px solid grey;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            h2{
+                margin-bottom: 20px;
+            }
+            label,input{
+                margin: 10px;
+                font-size: 22px;
+            }
+            input{
+                padding: 5px;
+                border-radius: 13px;
+            }
+            button{
+                margin-top: 10px;
+                font-size: 25px;
+                padding: 5px;
+                border-radius: 13px;
+                background-color: rgb(190, 117, 20);
+
+            }
+            .mensajeDiv{
+                padding: 8px;
+                margin: 5px;
+                border: 1px solid rgb(255, 251, 251);
+                border-radius: 80px;
+                font-size: 23px;
+                color: rgb(188, 233, 28);
+                margin-top: 29px;
+            }
+            .mensajeError{
+                background-color: red;
+            }
+            .mensajeCorrecto{
+                background-color: green;
+            }
+        }
+    }
+}
+
+footer{
+    background-color: black;
+    padding: 10px;
+    h1{
+        color: white;
+        margin: 10px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: cadetblue; }
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  height: 500px; }
+  .contenedor .aside {
+    background-color: aqua;
+    padding: 15px; }
+    .contenedor .aside h1, .contenedor .aside p {
+      margin: 30px 0px; }
+    .contenedor .aside nav {
+      display: flex;
+      flex-direction: column; }
+      .contenedor .aside nav a {
+        padding: 8px 0px;
+        font-size: 25px;
+        margin: 10px 0px;
+        text-decoration: none;
+        background-color: aquamarine; }
+
+main {
+  width: 100%; }
+  main table {
+    margin: 10px;
+    padding: 10px; }
+    main table thead tr th {
+      margin: 10px;
+      padding: 10px 30px; }
+  main section {
+    padding: 10px;
+    display: flex;
+    justify-content: center; }
+    main section form {
+      border: 3px solid grey;
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      main section form h2 {
+        margin-bottom: 20px; }
+      main section form label, main section form input {
+        margin: 10px;
+        font-size: 22px; }
+      main section form input {
+        padding: 5px;
+        border-radius: 13px; }
+      main section form button {
+        margin-top: 10px;
+        font-size: 25px;
+        padding: 5px;
+        border-radius: 13px;
+        background-color: #be7514; }
+      main section form .mensajeDiv {
+        padding: 8px;
+        margin: 5px;
+        border: 1px solid #fffbfb;
+        border-radius: 80px;
+        font-size: 23px;
+        color: #bce91c;
+        margin-top: 29px; }
+      main section form .mensajeError {
+        background-color: red; }
+      main section form .mensajeCorrecto {
+        background-color: green; }
+
+footer {
+  background-color: black;
+  padding: 10px; }
+  footer h1 {
+    color: white;
+    margin: 10px;
+    padding: 10px; }
