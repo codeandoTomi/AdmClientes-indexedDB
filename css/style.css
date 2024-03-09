@@ -31,9 +31,25 @@ main {
   main table {
     margin: 10px;
     padding: 10px; }
-    main table thead tr th {
-      margin: 10px;
-      padding: 10px 30px; }
+    main table thead {
+      padding: 10px;
+      background-color: grey;
+      border: 1px solid grey; }
+      main table thead tr th {
+        margin: 10px;
+        padding: 10px 30px; }
+    main table tbody tr {
+      border-top: 2px solid black; }
+      main table tbody tr td {
+        padding: 8px;
+        background-color: rgba(165, 169, 173, 0.781); }
+        main table tbody tr td .verde {
+          color: green; }
+        main table tbody tr td .rojo {
+          color: red; }
+        main table tbody tr td a {
+          text-decoration: none;
+          margin: 5px; }
   main section {
     padding: 10px;
     display: flex;
@@ -58,7 +74,7 @@ main {
         font-size: 25px;
         padding: 5px;
         border-radius: 13px;
-        background-color: #be7514; }
+        background-color: #d67d09; }
       main section form .mensajeDiv {
         padding: 8px;
         margin: 5px;

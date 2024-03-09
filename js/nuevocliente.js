@@ -14,7 +14,7 @@
         const abrirConexion = window.indexedDB.open('crm', 1);
         //////// ///////////
         abrirConexion.onerror = function(){
-            console.log("hubo un error")
+            // console.log("hubo un error")                    FUNCIONES.JS
         };
         ////////////////////
         abrirConexion.onsuccess = function(){
@@ -72,32 +72,32 @@
 
 
     /////////////////////////////////////////
-    function imprimirAlerta(mensaje, tipo){
-        const alerta = document.querySelector(".alerta")
+    // function imprimirAlerta(mensaje, tipo){
+    //     const alerta = document.querySelector(".alerta")
 
-        if(!alerta){
+    //     if(!alerta){
 
-            const divMensaje = document.createElement('div');
-            divMensaje.classList.add("mensajeDiv", "alerta")
+    //         const divMensaje = document.createElement('div');
+    //         divMensaje.classList.add("mensajeDiv", "alerta")
 
-            if(tipo === "error"){
-            divMensaje.classList.add("mensajeError");
-            } else{
-            divMensaje.classList.add("mensajeCorrecto");
-            }   
+    //         if(tipo === "error"){
+    //         divMensaje.classList.add("mensajeError");
+    //         } else{ 
+    //         divMensaje.classList.add("mensajeCorrecto");                         FUNCIONES.JS
+    //         }   
         
-            divMensaje.textContent = mensaje;
+    //         divMensaje.textContent = mensaje;
         
-            formulario.appendChild(divMensaje);
+    //         formulario.appendChild(divMensaje);
 
-            setTimeout(() =>{
-            divMensaje.remove();
-            }, 3000)
+    //         setTimeout(() =>{
+    //         divMensaje.remove();
+    //         }, 3000)
 
-        }
+    //     }
 
         
-    }
+    // }
 
 
 

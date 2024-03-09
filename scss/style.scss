@@ -45,15 +45,37 @@ main{
         padding: 10px;
 
         thead{
+            padding: 10px;
+            background-color: grey;
+            border: 1px solid grey;
             tr{
                 th{
                     margin: 10px;
                     padding: 10px 30px;
+
                 }
             }
         }
         tbody{
-
+            
+            tr{
+                border-top: 2px solid black;
+                td{
+                    padding: 8px;
+                    background-color: rgba(165, 169, 173, 0.781);
+                    .verde{
+                        color: green;
+                    }
+                    .rojo{
+                        color: red;
+                    }
+                    a{
+                        text-decoration: none;
+                        margin: 5px;
+                        
+                    }
+                }
+            }
         }
     }
         
@@ -86,7 +108,7 @@ main{
                 font-size: 25px;
                 padding: 5px;
                 border-radius: 13px;
-                background-color: rgb(190, 117, 20);
+                background-color: rgb(214, 125, 9);
 
             }
             .mensajeDiv{

@@ -1,6 +1,8 @@
 (function(){
 
         let DB;
+        const listadoClientes = document.querySelector("#listado-clientes");
+
 
         document.addEventListener("DOMContentLoaded", () =>{
             crearDB();
@@ -8,7 +10,44 @@
             if(window.indexedDB.open('crm', 1)){
                 obtenerClientes();
             }
+
+            listadoClientes.addEventListener('click', eliminarRegistro);
+
         });
+        ////////////////////////////////////////////////////////
+        function eliminarRegistro(e){
+            // console.log(e.target);
+            if(e.target.classList.contains('eliminar')){
+                // console.log("diste click en eliminarrrrr....")
+
+                const idEliminar = Number(e.target.dataset.cliente);
+                // console.log(idEliminar)
+
+                const confirmar = confirm("Desea eliminar el cliente?");
+                // console.log(confirmar)
+                if(confirmar === true){
+                    const transaction = DB.transaction(['crm'], 'readwrite');
+                    const objectStore = transaction.objectStore('crm');
+
+                    objectStore.delete(idEliminar);
+
+                    transaction.oncomplete = function(){
+                        console.log("eliminandoooo")
+                        
+                        e.target.parentElement.parentElement.remove();
+                    }
+
+                    transaction.onerror = function(){
+                        console.log('hubo un error');
+                    }
+
+
+
+                }
+
+            }
+
+        }
 
         /////// FFUNNCION QUE CREA LA BASE DE DATOS DE INDEXDB.
         function crearDB(){
@@ -55,14 +94,22 @@
                     if(cursor){
                         const { nombre, empresa, email, telefono, id } = cursor.value;
 
-                        const listadoClientes = document.querySelector("#listado-clientes")
+                        
                         listadoClientes.innerHTML += `
                             <tr>
-                                <th> nombre: ${nombre} </th>
+                                <td> ${nombre} </td>
+                                <td> ${telefono} </td>
+                                <td> ${empresa} </td>
+                                <td> ${email} </td>
+                                <td>
+                                    <a href="neditarcliente.html?id=${id}" class="verde"> Editar </a>
+                                    <a href="#" data-cliente="${id}" class="rojo eliminar"> Eliminar </a>
+                                </td>
+                            </tr>
                         `
                         
                         cursor.continue();
-                        console.log(cursor.value)
+                        // console.log(cursor.value)
 
                     } else{
                         ('no hay mas registros....')
